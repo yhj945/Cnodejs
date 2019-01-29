@@ -1,0 +1,35 @@
+.item{
+  border-bottom: 2px solid #ddd;
+  margin: 5px;
+  display: flex;
+  flex-direction: column
+}
+.userinfo{
+  padding: 5px;
+}
+.userinfo image{
+  height: 24px;
+  width: 24px;
+}
+.userinfo text{
+  font-size: 14px;
+  color: #888888
+}
+.title{
+  font-size: 20px;
+  padding: 5px;
+  color: #353535
+}
+.count{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  font-size: 17px;
+  color: #888888
+}
+.count text#visit_count{
+  color: #7f81fa
+}
+.count text#reply_count{
+  color: #c6a9f7
+}

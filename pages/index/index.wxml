@@ -1,0 +1,27 @@
+<view class='item' wx:for="{{data}}" wx:for-index="index" id='{{data[index].id}}' bindtap='visit'>
+  <view class='userinfo'>
+    <view>
+      <image src='{{data[index].author.avatar_url}}'/>
+      <text> {{data[index].author.loginname}}</text>
+    </view>
+    <view class='tab'>
+      <text wx:if="{{data[index].tab=='share'}}">分享</text>
+      <text wx:if="{{data[index].tab=='ask'}}">问答</text>
+      <text wx:if="{{data[index].tab=='job'}}">招聘</text>
+      <text wx:if="{{data[index].tab=='dev'}}">客户端测试</text>
+    </view>
+  </view>
+  <view class='title'>
+    <text>{{data[index].title}}</text>
+  </view>
+  <view class='count'>
+    <view>
+      <text id='visit_count'>{{data[index].visit_count}}</text>
+      <text>人看过</text>
+    </view>
+    <view>
+      <text id='reply_count'>{{data[index].reply_count}}</text>
+      <text>条回复</text>
+    </view>
+  </view> 
+</view>

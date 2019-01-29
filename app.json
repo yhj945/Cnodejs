@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/topic/topic",
+    "pages/share/share",
+    "pages/ask/ask",
+    "pages/job/job"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#353535",
+    "navigationBarTitleText": "CNODE社区",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/icon_tab_home.png",
+        "selectedIconPath": "/images/icon_tab_home2.png"
+      },
+      {
+        "pagePath": "pages/share/share",
+        "text": "分享",
+        "iconPath": "/images/icon_tab_share.png",
+        "selectedIconPath": "/images/icon_tab_share2.png"
+      },
+      {
+        "pagePath": "pages/ask/ask",
+        "text": "问答",
+        "iconPath": "/images/icon_tab_ask.png",
+        "selectedIconPath": "/images/icon_tab_ask2.png"
+      },
+      {
+        "pagePath": "pages/job/job",
+        "text": "招聘",
+        "iconPath": "/images/icon_tab_job.png",
+        "selectedIconPath": "/images/icon_tab_job2.png"
+      }
+    ]
+  }
+}

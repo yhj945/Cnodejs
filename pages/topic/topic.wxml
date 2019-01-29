@@ -1,0 +1,34 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class="ad_popError" wx:if="{{popErrorMsg}}">{{popErrorMsg}}</view>
+<view class='item'>
+  <view class='title'>
+    <text>{{title}}</text>
+  </view>
+  <view class='create'>
+    <text>作者{{loginname}}</text>
+    <text>发布于{{create_at}}</text>
+  </view>
+</view>
+<view class='content'>
+  <template is="wxParse" data="{{wxParseData:content.nodes}}" />
+</view>
+<view class="reply_count" wx:if="{{reply_count>0}}">{{reply_count}}回复</view>
+<view class='reply' wx:for="{{reply}}" wx:for-index="index" wx:key="">
+  <view class='reply_img'>
+    <image src='{{reply[index].avatar_url}}' style='width:40px;height:40px;' mode='scaleToFill' />
+  </view>
+  <view class='reply_info'>
+    <view class='reply_time'>
+      <text>{{reply[index].loginname}} </text>
+      <text>{{reply[index].floor}}楼•{{reply[index].reply_at}}</text>
+    </view>
+    <view class='reply_content'>
+      <!-- {{wxParseData1.wxParseData}} -->
+      <!-- <text>{{reply_content[index]}}</text> -->
+      <!-- <template is="wxParse" data="${{wxParseData1.wxParseData}}"/> -->
+      <!-- <block wx:for="{{replyTemArray}}" wx:key=""> -->
+      <template is="wxParse" data="{{wxParseData:replyTemArray[index]}}" />
+      <!-- </block> -->
+    </view>
+  </view>
+</view>
